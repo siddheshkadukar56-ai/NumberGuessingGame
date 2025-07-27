@@ -1,0 +1,29 @@
+// Created by Siddhesh Kadukar
+// Mini Project: Number Guessing Game
+// This Java code is written and developed by for learning purposes.
+
+import java.util.*;
+
+public class MyProgram { 
+//class name MyProgram 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); //Taking input from user
+        int target = 50;  // You can later make this a random number
+
+        for (int i = 0; i < 100; i++) {
+            System.out.print("Enter your guess: ");
+            int num = sc.nextInt();
+
+            if (num > target) {
+                System.out.println("Too high!");
+            } else if (num < target) {
+                System.out.println("Too low!");
+            } else {
+                System.out.println("Correct!");
+                break;
+            }
+        }
+
+        sc.close();
+    }
+}
